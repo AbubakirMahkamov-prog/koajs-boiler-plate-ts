@@ -6,14 +6,15 @@
   "type": "module",
   "scripts": {
     "migration:gn": "pnpm drizzle-kit generate:pg",
-    "dev": "nodemon --env-file=.env src/server.js",
+    "build": "tsc --build tsconfig.json",
+    "dev": "tsx watch --env-file=.env src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Abubakir Mahkamov",
   "license": "ISC",
   "dependencies": {
     "@neondatabase/serverless": "^0.6.1",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.1",
     "drizzle-orm": "^0.29.3",
     "koa": "^2.15.0",
     "pg": "^8.11.3",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@types/pg": "^8.10.9",
-    "drizzle-kit": "^0.20.10"
+    "drizzle-kit": "^0.20.10",
+    "tsx": "^4.7.0"
   }
 }
