@@ -1,0 +1,26 @@
+{
+  "name": "koaboilerplate",
+  "version": "1.0.0",
+  "description": "This is boilerplate for restapi",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "migration:gn": "pnpm drizzle-kit generate:pg",
+    "dev": "nodemon --env-file=.env src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abubakir Mahkamov",
+  "license": "ISC",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.6.1",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.29.3",
+    "koa": "^2.15.0",
+    "pg": "^8.11.3",
+    "postgres": "^3.4.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.10.9",
+    "drizzle-kit": "^0.20.10"
+  }
+}

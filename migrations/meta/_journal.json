@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1704560899436,
+      "tag": "0000_normal_sphinx",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1704606020323,
+      "tag": "0001_gigantic_rick_jones",
+      "breakpoints": true
+    }
+  ]
+}
