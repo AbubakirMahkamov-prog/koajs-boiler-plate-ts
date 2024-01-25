@@ -13,4 +13,5 @@
 #### DB_NAME=tutorialts
 #### DB_HOST=127.0.0.1
 
-## To run migrations npm run migration:gn
+## To run migrations 
+#### npm run migration:gn
