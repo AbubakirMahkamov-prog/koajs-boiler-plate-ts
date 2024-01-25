@@ -2,7 +2,7 @@ import 'dotenv/config';
 import  { Config } from 'drizzle-kit';
 
 export default {
-  schema: './db/schema.js',
+  schema: './src/db/schema',
   out: './migrations',
   driver: 'pg', // 'pg' | 'mysql2' | 'better-sqlite' | 'libsql' | 'turso'
   dbCredentials: {
