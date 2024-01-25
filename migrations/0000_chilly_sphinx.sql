@@ -1,4 +1,5 @@
 CREATE TABLE IF NOT EXISTS "users" (
 	"id" serial PRIMARY KEY NOT NULL,
-	"name" text
+	"name" text,
+	"age" integer DEFAULT 0
 );

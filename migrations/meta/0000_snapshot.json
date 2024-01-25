@@ -1,5 +1,5 @@
 {
-  "id": "642d77cd-5f21-4621-8a60-bfb492b66d21",
+  "id": "c59ce90f-736c-4ab4-ae5c-57889829bddf",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -19,6 +19,13 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false
+        },
+        "age": {
+          "name": "age",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
         }
       },
       "indexes": {},
