@@ -1,6 +1,8 @@
 # Purpose of this boiler plate to build rest api with koajs
 
-## To install all packages npm install
+## To install all packages run below
+
+##### npm install
 
 ## First of all create .env file and write your configs like that 
 
