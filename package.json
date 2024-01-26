@@ -13,18 +13,18 @@
   "author": "Abubakir Mahkamov",
   "license": "ISC",
   "dependencies": {
-    "@neondatabase/serverless": "^0.6.1",
     "@types/koa-router": "^7.4.8",
     "dotenv": "^16.4.1",
-    "drizzle-orm": "^0.29.3",
     "koa": "^2.15.0",
     "koa-router": "^12.0.1",
     "pg": "^8.11.3",
-    "postgres": "^3.4.3"
+    "postgres": "^3.4.3",
+    "reflect-metadata": "^0.2.1",
+    "typeorm": "^0.3.19"
   },
   "devDependencies": {
-    "@types/pg": "^8.10.9",
-    "drizzle-kit": "^0.20.10",
+    "@types/node": "^20.11.7",
+    "@types/pg": "^8.11.0",
     "tsx": "^4.7.0"
   }
 }

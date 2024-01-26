@@ -1,13 +1,14 @@
-
-
+import "reflect-metadata"
 import  Koa from 'koa'
-import { DB } from './db/db'
-import { Users } from "./db/schema";
 import { config } from "./config/index";
 import { mainRouter } from "./starters/routes";
+import { AppDataSource } from "./data-source";
 const { PORT } = config;
 const app = new Koa();
 
+AppDataSource.initialize().then(() => {
+    console.log('connection')
+})
 // app.use(async (ctx: any, next: Koa.Next) => {
 //   ctx.body = 'Hello World';
 //   // let res = await DB.insert(Users).values({
