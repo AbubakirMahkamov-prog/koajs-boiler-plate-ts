@@ -1,19 +1,20 @@
-import "reflect-metadata"
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 
-@Entity()
+@Entity("user")
 export class User {
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn("increment")
     id: number
 
-    @Column()
+    @Column('varchar')
     firstName: string
 
-    @Column()
+    @Column('varchar')
     lastName: string
 
-    @Column()
-    age: number
+    @Column('varchar')
+    username: string
 
+    @Column('varchar')
+    password: string
 }
