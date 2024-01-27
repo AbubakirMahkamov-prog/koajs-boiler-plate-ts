@@ -4,3 +4,8 @@ export interface UserCreate {
     lastName: string;
     password: string
 }
+
+export interface UserLogin {
+    userName: string;
+    password: string;
+}
