@@ -14,6 +14,7 @@
 #### DB_PASS=1234
 #### DB_NAME=tutorialts
 #### DB_HOST=127.0.0.1
+#### NODE_ENV=development
+#### ACCESS_TOKEN_SECRET=
+#### REFRESH_TOKEN_SECRET=
 
-## To run migrations 
-#### npm run migration:gn
