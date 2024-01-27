@@ -1,16 +1,12 @@
 import Router from "koa-router";
 import { auth } from "../middlewares/auth";
 import * as Koa from "koa";
-const userRouter = new Router();
+import UserController from "../controllers/userController";
 
 
-userRouter.get("/user", (ctx, next) => {
-    ctx.body = 'This is from Router!'
-});
+const userController = new UserController();
+const userRouter = new Router({ prefix: '/user' });
 
-
-userRouter.get('/another', auth(), (ctx: Koa.BaseContext, next: () => Promise<any>) => {
-    ctx.body = 'Another'
-})
+userRouter.post("/", userController.create)
 
 export default userRouter;

@@ -13,7 +13,7 @@ export class User {
     lastName: string
 
     @Column('varchar')
-    username: string
+    userName: string
 
     @Column('varchar')
     password: string
