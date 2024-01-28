@@ -112,7 +112,18 @@ class AuthController {
             }
         }
     }
-
+    logout = async function (ctx: Koa.Context, next: () => Promise<any>) {
+        const cookies = await <any>ctx.cookies.get('jwt');
+        if (!cookies) {
+            ctx.status = 204;
+            return
+        }
+        ctx.cookies.set('jwt', '');
+        ctx.body = { 
+            message: 'Cookie cleared'
+        }
+    }
+    
 }
 
 export default AuthController;
