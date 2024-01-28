@@ -8,5 +8,6 @@ const authController = new AuthController();
 const authRouter = new Router({ prefix: '/auth' });
 
 authRouter.post("/login", authController.login)
+authRouter.get('/refresh', authController.refresh)
 
 export default authRouter;
