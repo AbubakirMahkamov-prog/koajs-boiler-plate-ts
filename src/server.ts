@@ -10,7 +10,9 @@ dbConnect()
 const { PORT } = config;
 const app = new Koa();
 
+
 mainRouter(app);
+
 
 let server = app.listen(PORT, () => {
     console.log(`App running on ${PORT} 🚀`)
