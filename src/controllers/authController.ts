@@ -59,6 +59,7 @@ class AuthController {
             sameSite: 'none', //cross-site cookie 
             maxAge: 7 * 24 * 60 * 60 * 1000 //cookie expiry: set to match rT
         })
+        // ctx.session.
     
         // Send accessToken containing username and roles 
         ctx.body = {
