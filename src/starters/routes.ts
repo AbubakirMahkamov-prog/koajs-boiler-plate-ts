@@ -17,7 +17,9 @@ export async function mainRouter (app: Koa) {
 
     app.use(async (ctx, next) => {
         // Increment visit count
-        ctx.session.views = ctx.session.views ? ctx.session.views + 1 : 1;
+        if (ctx.session) {
+            ctx.session.views = (ctx.session?.views ?? 0) + 1;
+        }
         await next();
     });
     // Example route
