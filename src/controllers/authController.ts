@@ -43,7 +43,7 @@ class AuthController {
                 }
             },
             config.ACCESS_TOKEN_SECRET ? config.ACCESS_TOKEN_SECRET: "",
-            { expiresIn: '15m' }
+            { expiresIn: '3ms' }
         )
     
         const refreshToken = jwt.sign(
@@ -56,7 +56,7 @@ class AuthController {
         ctx.cookies.set('jwt', refreshToken, {
             httpOnly: true, //accessible only by web server 
             secure: false, //https
-            sameSite: 'none', //cross-site cookie 
+            sameSite: "strict", //cross-site cookie 
             maxAge: 7 * 24 * 60 * 60 * 1000 //cookie expiry: set to match rT
         })
         // ctx.session.
@@ -68,6 +68,8 @@ class AuthController {
     }
 
     refresh = async function (ctx: Koa.Context, next: () => Promise<any>) {
+        console.log(ctx.cookies.get('jwt'), 'refreshhhhh')
+        console.log(ctx.cookies.get('koa'), 'refreshhhhh')
         const cookies = await <any>ctx.cookies.get('jwt');
         if (!cookies) {
             ctx.status = 401;
