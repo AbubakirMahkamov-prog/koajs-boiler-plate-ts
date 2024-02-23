@@ -4,11 +4,17 @@ import helmet from 'koa-helmet';
 import koaBodyParse from "koa-bodyparser";
 import koaJson from "koa-json";
 import Session from 'koa-session';
+import cors from 'koa-cors';
 import { config } from "../config/index";
 //routers
 import userRouter  from "../routes/user";
 import authRouter  from "../routes/auth";
 export async function mainRouter (app: Koa) {
+    app.use(cors({
+        origin: 'http://localhost:5173',
+        credentials: true,
+        methods: ["POST", "GET", "PATCH"]
+    }))
     //session config
     app.keys = [
         config.SESSION_KEY ? config.SESSION_KEY: ''

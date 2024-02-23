@@ -8,7 +8,8 @@
     "build": "npx tsc",
     "dev": "tsx watch src/server.ts",
     "prod": "node dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --noEmit"
   },
   "author": "Abubakir Mahkamov",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "jsonwebtoken": "^9.0.2",
     "koa": "^2.15.0",
     "koa-bodyparser": "^4.4.1",
+    "koa-cors": "^0.0.16",
     "koa-helmet": "^7.0.2",
     "koa-json": "^2.0.2",
     "koa-ratelimit": "^5.1.0",
